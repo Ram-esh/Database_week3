@@ -1,0 +1,48 @@
+
+/*
+Ramesh Kunwar
+18413696
+2018
+Database I
+RamKunwar
+5/7/2018
+*/
+--@E:\Ram_Esh\create_18413696.txt
+
+
+--creating the table sites.
+CREATE TABLE sites(
+site_id NUMBER(5),
+site_name VARCHAR2(20));
+
+
+ALTER TABLE sites ADD(
+location VARCHAR2(30));
+
+--creating the table subject_areas.
+CREATE TABLE subject_areas(
+subject_id NUMBER(10),
+subject_name VARCHAR2(20),
+description VARCHAR2(100));
+
+--creating the table trainers.
+CREATE TABLE trainers(
+trainer_id NUMBER(10),
+t_firstname VARCHAR2(20),
+t_surname VARCHAR2(20),
+mentor_id NUMBER(10),
+contact_no VARCHAR2(15),
+rate NUMBER(3));
+
+--creating the table students.
+CREATE TABLE students(
+student_id      NUMBER(4),
+national_ins	VARCHAR2(10),
+student_fname   VARCHAR2(10),
+student_lname   VARCHAR2(12),
+street		VARCHAR2(10),
+city		VARCHAR2(15),
+country		VARCHAR2(15)DEFAULT 'ENGLAND',
+tel_no         	VARCHAR2(15) NOT NULL,
+gender       	VARCHAR2(1) ,
+date_of_birth  	DATE);
